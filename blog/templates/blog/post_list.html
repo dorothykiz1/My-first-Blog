@@ -6,17 +6,14 @@
         <div>
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
+        {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h3><a href="">{{ post.title }}</a></h3>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+        {% endfor %}
 
-        <div>
-            <p>published: 03.04.2018, 12:24</p>
-            <h2><em><a href="">My first post</a></em></h2>
-            <p>April is here! HOORAY.My two favourite people were born in this month.I call it my other lucky month besides February.</p>
-        </div>
 
-        <div>
-            <p>published: 03.04.2018, 12:24</p>
-            <h2><em><a href="">My second post</a></em></h2>
-            <p>So on the 17th of this month my Little mini me was born and it was on this day that i saw her little button nose and grapy eyes.Words cannot describe what i really felt then but here she is all grown into alittle independent Ladybug.</p>
-        </div>
     </body>
 </html>
